@@ -1,6 +1,6 @@
-# zmem MCP Memory Server
+# xgmem MCP Memory Server
 
-zmem is a TypeScript-based Model Context Protocol (MCP) server for enabling project-specific and knowledge graph-based memory for Claude, LLM agents, and other tools. It supports storing, retrieving, and managing entities, relations, and observations per project, with a focus on flexibility and cross-project knowledge sharing.
+xgmem is a TypeScript-based Model Context Protocol (MCP) server for enabling project-specific and knowledge graph-based memory for Claude, LLM agents, and other tools. It supports storing, retrieving, and managing entities, relations, and observations per project, with a focus on flexibility and cross-project knowledge sharing.
 
 ## Features
 
@@ -11,7 +11,8 @@ zmem is a TypeScript-based Model Context Protocol (MCP) server for enabling proj
 
 ## Use Case
 
-zmem is ideal for:
+xgmem is ideal for:
+
 - Agents and LLMs that need to store and retrieve structured memory (entities, relations, observations) per project.
 - Cross-project knowledge sharing and migration.
 - Scalable, disk-persistent, and queryable memory for agent ecosystems.
@@ -23,7 +24,7 @@ zmem is ideal for:
 Add to your MCP config (e.g., for windsurf):
 
 ```json
-"zmem": {
+"xgmem": {
   "command": "node",
   "args": ["/app/dist/index.js"]
 }
@@ -56,8 +57,8 @@ npm start
 ### Docker
 
 ```sh
-docker build -t zmem-mcp-server .
-docker run -v $(pwd)/memories:/app/memories zmem-mcp-server
+docker build -t xgmem-mcp-server .
+docker run -v $(pwd)/memories:/app/memories xgmem-mcp-server
 ```
 
 This will persist all project memory files in the `memories` directory on your host.
@@ -76,11 +77,17 @@ To save observations (memory) for a project, call the `save_project_observations
     "observations": [
       {
         "entityName": "Alice",
-        "contents": ["Alice joined Acme Corp in 2021.", "Alice is a software engineer."]
+        "contents": [
+          "Alice joined Acme Corp in 2021.",
+          "Alice is a software engineer."
+        ]
       },
       {
         "entityName": "Bob",
-        "contents": ["Bob joined Acme Corp in 2022.", "Bob is a product manager."]
+        "contents": [
+          "Bob joined Acme Corp in 2022.",
+          "Bob is a product manager."
+        ]
       }
     ]
   }
@@ -91,7 +98,8 @@ You can use any compatible MCP client, or send this JSON via stdin if running th
 
 ## Tooling and API
 
-zmem exposes the following tools:
+xgmem exposes the following tools:
+
 - `save_project_observations`
 - `get_project_observations`
 - `add_graph_observations`

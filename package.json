@@ -1,14 +1,14 @@
 {
-  "name": "zmem",
+  "name": "xgmem",
   "version": "0.0.1",
   "description": "MCP server for enabling memory of multiple projects for through a knowledge graph",
   "license": "",
   "author": "Meet Dhanani <meetdhanani@gmail.com>",
-  "homepage": "https://modelcontextprotocol.io",
-  "bugs": "https://github.com/meetdhanani17/zmem/issues",
+  "homepage": "https://github.com/meetdhanani17/xgmem",
+  "bugs": "https://github.com/meetdhanani17/xgmem/issues",
   "type": "module",
   "bin": {
-    "zmem": "dist/index.js"
+    "xgmem": "dist/index.js"
   },
   "files": [
     "dist"
