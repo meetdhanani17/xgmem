@@ -1,14 +1,14 @@
 {
-  "name": "@modelcontextprotocol/server-memory",
-  "version": "0.6.3",
-  "description": "MCP server for enabling memory for Claude through a knowledge graph",
-  "license": "MIT",
-  "author": "Anthropic, PBC (https://anthropic.com)",
+  "name": "zmem",
+  "version": "0.0.1",
+  "description": "MCP server for enabling memory of multiple projects for through a knowledge graph",
+  "license": "",
+  "author": "Meet Dhanani <meetdhanani@gmail.com>",
   "homepage": "https://modelcontextprotocol.io",
-  "bugs": "https://github.com/modelcontextprotocol/servers/issues",
+  "bugs": "https://github.com/meetdhanani17/zmem/issues",
   "type": "module",
   "bin": {
-    "mcp-server-memory": "dist/index.js"
+    "zmem": "dist/index.js"
   },
   "files": [
     "dist"
