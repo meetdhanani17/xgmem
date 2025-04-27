@@ -1,6 +1,6 @@
-# xmem MCP Memory Server
+# zmem MCP Memory Server
 
-xmem is a TypeScript-based Model Context Protocol (MCP) server for enabling project-specific and knowledge graph-based memory for Claude, LLM agents, and other tools. It supports storing, retrieving, and managing entities, relations, and observations per project, with a focus on flexibility and cross-project knowledge sharing.
+zmem is a TypeScript-based Model Context Protocol (MCP) server for enabling project-specific and knowledge graph-based memory for Claude, LLM agents, and other tools. It supports storing, retrieving, and managing entities, relations, and observations per project, with a focus on flexibility and cross-project knowledge sharing.
 
 ## Features
 
@@ -11,7 +11,7 @@ xmem is a TypeScript-based Model Context Protocol (MCP) server for enabling proj
 
 ## Use Case
 
-xmem is ideal for:
+zmem is ideal for:
 - Agents and LLMs that need to store and retrieve structured memory (entities, relations, observations) per project.
 - Cross-project knowledge sharing and migration.
 - Scalable, disk-persistent, and queryable memory for agent ecosystems.
@@ -23,7 +23,7 @@ xmem is ideal for:
 Add to your MCP config (e.g., for windsurf):
 
 ```json
-"xmem": {
+"zmem": {
   "command": "node",
   "args": ["/app/dist/index.js"]
 }
@@ -56,8 +56,8 @@ npm start
 ### Docker
 
 ```sh
-docker build -t xmem-mcp-server .
-docker run -v $(pwd)/memories:/app/memories xmem-mcp-server
+docker build -t zmem-mcp-server .
+docker run -v $(pwd)/memories:/app/memories zmem-mcp-server
 ```
 
 This will persist all project memory files in the `memories` directory on your host.
@@ -91,7 +91,7 @@ You can use any compatible MCP client, or send this JSON via stdin if running th
 
 ## Tooling and API
 
-xmem exposes the following tools:
+zmem exposes the following tools:
 - `save_project_observations`
 - `get_project_observations`
 - `add_graph_observations`
