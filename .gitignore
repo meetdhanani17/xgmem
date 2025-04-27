@@ -1,0 +1,6 @@
+node_modules/
+dist/
+memory.json
+.env
+mcp-mem-index.ts
+.DS_Store
