@@ -24,10 +24,12 @@ xgmem is ideal for:
 Add to your MCP config (e.g., for windsurf):
 
 ```json
-"xgmem": {
-  "command": "node",
-  "args": ["/app/dist/index.js"]
-}
+"mcpServers": {
+    "xgmem": {
+      "command": "npx",
+      "args": ["-y", "xgmem@latest"]
+    }
+  }
 ```
 
 ### Install dependencies
