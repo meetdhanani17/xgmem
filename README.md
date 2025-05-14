@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/meetdhanani17-xgmem-badge.png)](https://mseep.ai/app/meetdhanani17-xgmem)
+
 # xgmem MCP Memory Server
 
 xgmem is a TypeScript-based Model Context Protocol (MCP) server for enabling project-specific and knowledge graph-based memory for Claude, LLM agents, and other tools. It supports storing, retrieving, and managing entities, relations, and observations per project, with a focus on flexibility and cross-project knowledge sharing.
