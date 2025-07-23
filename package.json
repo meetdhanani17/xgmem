@@ -1,6 +1,6 @@
 {
   "name": "xgmem",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "MCP server for enabling memory of multiple projects for through a knowledge graph",
   "license": "",
   "author": "Meet Dhanani <meetdhanani@gmail.com>",
@@ -8,13 +8,15 @@
   "bugs": "https://github.com/meetdhanani17/xgmem/issues",
   "type": "module",
   "bin": {
-    "xgmem": "dist/index.js"
+    "xgmem": "dist/src/main.js"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc && shx chmod +x dist/*.js",
+    "dev": "node --loader ts-node/esm src/main.ts",
+    "build": "tsc && shx chmod +x dist/**/*.js",
+    "esbuild": "node build.mjs",
     "prepare": "npm run build",
     "watch": "tsc --watch",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
@@ -26,9 +28,11 @@
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^22",
+    "esbuild": "^0.25.8",
     "jest": "^29.7.0",
     "shx": "^0.3.4",
     "ts-jest": "^29.3.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   }
 }
